@@ -1,28 +1,25 @@
 # edx-vagrant
 EdX Vagrant installer for Digital Ocean (Ubuntu 12.04, Eucalyptus release)
 
-Requirements:
+## Requirements:
 
-- Vagrant ( https://www.vagrantup.com/downloads.html )
-- vagrant-digitalocean ( https://github.com/devopsgroup-io/vagrant-digitalocean )
-- vagrant-env ( https://github.com/gosuri/vagrant-env )
+- Vagrant (https://www.vagrantup.com/downloads.html)
+- vagrant-digitalocean (https://github.com/devopsgroup-io/vagrant-digitalocean)
+- vagrant-env (https://github.com/gosuri/vagrant-env)
 
-Usage instructions:
+## Usage instructions:
 
-- Clone edx-vagrant:
-
-git clone https://github.com/feedbackfruits/edx-vagrant
-
+- Clone edx-vagrant: `git clone https://github.com/feedbackfruits/edx-vagrant`
 - Change to edx-vagrant directory
-- Setup your .env file with the variables described on .env.dev
-- Execute vagrant:
-
-vagrant up
+- Setup your .env file with the variables described on .env.example
+- Execute vagrant: `vagrant up --provider=digital_ocean`
 
 This will create a droplet on Digital Ocean, and the following applications will be available:
 
 - LMS - Port 80
 - Studio - Port 18010
+
+## Authentication Details:
 
 The application has the demo course pre-loaded and dummy accounts, you can log in to the website as:
 
