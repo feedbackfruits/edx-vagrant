@@ -8,9 +8,9 @@ Vagrant.configure(2) do |config|
     override.vm.box_url = 'https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box'
     provider.token = ENV['DIGITAL_OCEAN_TOKEN']
     provider.image = 'ubuntu-12-04-x64'
-    provider.region = 'ams2'
+    provider.region = ENV['DIGITAL_OCEAN_REGION']
     provider.size = '4gb'
-    provider.ssh_key_name = ENV['DIGITAL_OCEAN_SSH_KEY']
+    provider.ssh_key_name = ENV['DIGITAL_OCEAN_SSH_KEY_NAME']
   end
 
   config.vm.provision 'shell', inline: <<-SHELL
