@@ -14,6 +14,6 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision 'shell', inline: <<-SHELL
-		sudo bash /vagrant/provision.sh
-	SHELL
+    sudo bash /vagrant/provision.sh
+  SHELL
 end
